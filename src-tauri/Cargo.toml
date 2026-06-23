@@ -1,0 +1,29 @@
+[package]
+name = "typenext"
+version = "1.0.0"
+description = "TypeNext - A lightweight cross-platform Markdown editor"
+authors = ["TypeNext Team"]
+license = "MIT"
+repository = ""
+edition = "2021"
+rust-version = "1.78"
+
+[build-dependencies]
+tauri-build = { version = "2.6.2", features = [] }
+
+[dependencies]
+tauri = { version = "2.11.2", features = [] }
+tauri-plugin-dialog = "2.7.1"
+tauri-plugin-fs = "2.5.1"
+serde = { version = "1.0.228", features = ["derive"] }
+encoding_rs = "0.8.34"
+
+[features]
+custom-protocol = ["tauri/custom-protocol"]
+
+[profile.release]
+panic = "abort"
+codegen-units = 1
+lto = true
+opt-level = "z"
+strip = true

@@ -1,0 +1,88 @@
+{
+  "$schema": "../node_modules/@tauri-apps/cli/schema.json",
+  "build": {
+    "beforeBuildCommand": "npm run build",
+    "beforeDevCommand": "npm run dev",
+    "devUrl": "http://localhost:5173",
+    "frontendDist": "../dist"
+  },
+  "bundle": {
+    "active": true,
+    "category": "Productivity",
+    "copyright": "",
+    "targets": "all",
+    "externalBin": [],
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ],
+    "windows": {
+      "certificateThumbprint": null,
+      "digestAlgorithm": "sha256",
+      "timestampUrl": "",
+      "webviewInstallMode": {
+        "type": "embedBootstrapper"
+      }
+    },
+    "longDescription": "A lightweight, cross-platform Markdown editor rebuilt with Tauri 2 + Rust + Vue 3.",
+    "macOS": {
+      "entitlements": null,
+      "exceptionDomain": "",
+      "frameworks": [],
+      "providerShortName": null,
+      "signingIdentity": null,
+      "minimumSystemVersion": "10.13"
+    },
+    "resources": [],
+    "shortDescription": "Lightweight Markdown Editor",
+    "linux": {
+      "deb": {
+        "depends": []
+      }
+    },
+    "fileAssociations": [
+      {
+        "ext": ["md", "markdown", "mdown", "mkd", "mkdn", "mdwn"],
+        "name": "Markdown Document",
+        "description": "Markdown text file",
+        "role": "Editor",
+        "mimeType": "text/markdown"
+      },
+      {
+        "ext": ["txt"],
+        "name": "Plain Text",
+        "description": "Plain text file",
+        "role": "Editor",
+        "mimeType": "text/plain"
+      }
+    ]
+  },
+  "productName": "TypeNext",
+  "mainBinaryName": "TypeNext",
+  "version": "1.0.0",
+  "identifier": "com.typenext",
+  "plugins": {},
+  "app": {
+    "security": {
+      "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' asset: https://asset.localhost data: blob:; font-src 'self' data: asset: https://asset.localhost; connect-src 'self' ipc: http://ipc.localhost"
+    },
+    "windows": [
+      {
+        "fullscreen": false,
+        "height": 700,
+        "resizable": true,
+        "title": "TypeNext",
+        "width": 1130,
+        "minWidth": 480,
+        "minHeight": 300,
+        "center": true,
+        "decorations": true,
+        "transparent": false,
+        "shadow": true
+      }
+    ]
+  }
+}
